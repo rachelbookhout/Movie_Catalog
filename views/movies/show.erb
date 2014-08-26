@@ -1,0 +1,6 @@
+<h1><%= @movie_info[0]["title"]%></h1>
+<h4>Genre: <%=@movie_info[0]["genre"]%></h4>
+<h4>Studio: <%=@movie_info[0]["studios"]%></h4>
+<% @movie_info.each do |movie| %>
+  <h2><a href="/actors/<%=movie["actor"]%>"><%=movie["name"]%></a> as <%=movie["character"]%></h2>
+<%end%>
